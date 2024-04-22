@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Search Post Offices</title>
+  </head>
+  <body>
+    <div id="container" class="large_font_size">
+      <div id="info_box">
+        <p style="color: #575A85;font-weight: 700;">Post Office Application.</p>
+        <p class="small_font_size" style="color: #B8BCCC;">
+          This Application Allows you to extract information about the nearest
+          Post Offices, based on your location.
+        </p>
+      </div>
+      <div id="btn_box">
+        <p style="font-weight: 700;">Your Current IP Address is <span id="ip_span" style="color: white;"></span></p>
+        <button id="get_started_btn" class="small_font_size">Get Started</button>
+      </div>
+    </div>
+    <div class="medium_font_size" id="onclick_container"  style="display: none;">
+      <div id="first_info_div">
+        <div>IP Address : <span id="ip_sec_span" style="color: white;"></span></div>
+        <div>
+          <div>Lat: <span id="lat_span"></span></div>
+          <div>City: <span id="city_span"></span></div>
+          <div>Organisation: <span id="org_span"></span></div>
+        </div>
+        <div>
+          <div>Long: <span id="long_span"></span></div>
+          <div>Region: <span id="reg_sapn"></span></div>
+          <div>Hostname: <span id="host_span"></span></div>
+        </div>
+      </div>
+      <div id="map_div">
+        <h1 class="larger_font_size">Your Current Location</h1>
+        <iframe
+          id="map_frame"
+          frameborder="0"
+          style="border: 0"
+        ></iframe>
+      </div>
+
+      <h1 class="larger_font_size">More Information About You</h1>
+      <div id="second_info_div" >
+        <p>Time Zone: <span id="tzone_span"></span></p>
+        <p>Date And Time: <span id="dt_span"></span></p>
+        <p>Pincode: <span id="pin_span"></span></p>
+        <p>Message: <span>Number of pincode(s) found: <span id="num_span"></span></span></p>
+      </div>
+
+      <h1 class="larger_font_size">Post Offices Near You</h1>
+      <div id="search_div">        
+        <input type="text" class="medium_font_size" placeholder="Search By Name" />
+        <img src="./assets/search_icon.png" alt="">
+      </div>
+      <div id="post_grid_div"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
